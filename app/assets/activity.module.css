@@ -1,0 +1,71 @@
+.card {
+  display: grid;
+  justify-content: space-around;
+  padding: 1.5em 0;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 0.7em;
+}
+
+.wallpaper {
+  position: relative;
+  top: 1em;
+  border-radius: 0.7em;
+  height: 4em;
+}
+
+.wallpaper.work {
+  background: hsl(15, 100%, 70%) url("../../public/icon-work.svg") 95% no-repeat;
+}
+
+.wallpaper.play {
+  background: hsl(195, 74%, 62%) url("../../public/icon-play.svg") 95% no-repeat;
+}
+
+.wallpaper.study {
+  background: hsl(348, 100%, 68%) url("../../public/icon-study.svg") 95% no-repeat;
+}
+
+.wallpaper.exercise {
+  background: hsl(145, 58%, 55%) url("../../public/icon-exercise.svg") 95% no-repeat;
+}
+
+.wallpaper.social {
+  background: hsl(264, 64%, 52%) url("../../public/icon-social.svg") 95% no-repeat;
+}
+
+.wallpaper.selfcare {
+  background: hsl(43, 84%, 65%) url("../../public/icon-self-care.svg") 95% no-repeat;
+}
+
+.header {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.dots {
+  grid-column-start: 2;
+  justify-self: end;
+}
+.dots:hover {
+  cursor: pointer;
+}
+
+.currentData {
+  font-size: 2em;
+}
+
+.previousData {
+  color: hsl(236, 100%, 87%);
+}
+
+@media screen and (min-width: 600px) {
+  .currentData {
+    grid-column: 1/3;
+  }
+}
+
+/*# sourceMappingURL=activity.module.css.map */

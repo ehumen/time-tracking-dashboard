@@ -4,7 +4,7 @@ import UserCard from "./assets/UserCard";
 import ActivityCard from "./assets/ActivityCard";
 import classes from "./page.module.css";
 import {useEffect, useState} from "react";
-import handler from "./api/route";
+import {handler} from "./api/route";
 
 
 const initialState = {

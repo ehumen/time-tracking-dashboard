@@ -4,13 +4,23 @@ import UserCard from "./assets/UserCard";
 import ActivityCard from "./assets/ActivityCard";
 import classes from "./page.module.css";
 import {useEffect, useState} from "react";
-import {handler} from "./api/route";
+
 
 
 const initialState = {
     photo: "/image-jeremy.png",
     period: 'Weekly',
     data: [],
+}
+
+async function handler(setState) {
+    let response = await fetch('/data.json')
+        .then(response => response.json())
+        .then(json => {
+                setState(json)
+            }
+        );
+
 }
 
 export default function Page() {

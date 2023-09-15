@@ -13,22 +13,22 @@ const initialState = {
     data: [],
 }
 
-async function handler(setState) {
-    let response = await fetch('/data.json')
-        .then(response => response.json())
-        .then(json => {
-                setState(json)
-            }
-        );
 
-}
 
 export default function Page() {
     const [period, setPeriod] = useState(initialState.period);
     const [data, setState] = useState(initialState.data);
-
+    
+    async function handler() {
+        let response = await fetch('/data.json')
+            .then(response => response.json())
+            .then(json => {
+                setState(json)
+            }
+        );
+    }
     useEffect(() => {
-        handler(setState);
+        handler();
     }, [period])
 
     return (
